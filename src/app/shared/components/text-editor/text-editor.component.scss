@@ -1,0 +1,17 @@
+.top {
+  padding: 6px 10px;
+  display: flex;
+  justify-content: space-between;
+
+  .title {
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+    width: 100%;
+    margin-right: 10px;
+  }
+
+  .ce-block__content {
+    margin: 0 !important;
+  }
+}

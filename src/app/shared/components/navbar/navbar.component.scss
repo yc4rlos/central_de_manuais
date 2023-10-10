@@ -1,0 +1,64 @@
+$navbar: #4758b8;
+$topbar: #1f2651;
+
+.title {
+  margin-left: 10px;
+}
+
+mat-toolbar {
+  color: white;
+}
+
+mat-drawer {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+mat-drawer-container {
+  height: calc(100% - 64px);
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  background-color: $navbar;
+  min-height: 100%;
+  height: max-content;
+  padding: 10px;
+
+  mat-list-item {
+    div {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+
+      span,
+      mat-icon {
+        color: white;
+      }
+    }
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.3);
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  }
+
+  mat-icon {
+    margin: 0 5px;
+  }
+
+  .sublist {
+    margin-left: 20px;
+  }
+}
+
+mat-toolbar {
+  background-color: $topbar;
+}
+
+main {
+  padding: 10px 20px;
+}

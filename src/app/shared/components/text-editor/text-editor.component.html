@@ -1,0 +1,29 @@
+<mat-card>
+  <mat-card-title class="top">
+    <input type="text" [formControl]="titleControl" class="title" />
+
+    <button
+      color="primary"
+      mat-mini-fab
+      (click)="onEdit()"
+      matTooltip="Editar manual"
+      *ngIf="!isEditing; else StopEdit"
+    >
+      <mat-icon>edit</mat-icon>
+    </button>
+
+    <ng-template #StopEdit>
+      <button
+        color="primary"
+        mat-mini-fab
+        (click)="onStopEdit()"
+        matTooltip="Parar edição"
+      >
+        <mat-icon>close</mat-icon>
+      </button>
+    </ng-template>
+  </mat-card-title>
+  <mat-card-content>
+    <div id="texteditor"></div>
+  </mat-card-content>
+</mat-card>

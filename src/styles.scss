@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.ce-block__content,
+.ce-toolbar__content {
+  max-width: calc(100% - 80px) !important;
+}
+
+.cdx-block {
+  max-width: 100% !important;
+}
+
+.mat-mdc-list-item-icon,
+.mat-mdc-list-item-title.mdc-list-item__primary-text {
+  color: white !important;
+}

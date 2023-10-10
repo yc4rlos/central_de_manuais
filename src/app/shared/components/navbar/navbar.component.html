@@ -1,0 +1,49 @@
+<mat-toolbar>
+  <button mat-icon-button type="button" (click)="drawer.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span class="title">Central de Manuais</span>
+</mat-toolbar>
+
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <nav>
+      <mat-list>
+        <mat-list-item>
+          <mat-icon matListItemIcon>home</mat-icon>
+          <span matListItemTitle>Página Inicial</span>
+        </mat-list-item>
+        <mat-list-item (click)="showSites = !showSites">
+          <mat-icon matListItemIcon>web</mat-icon>
+          <div>
+            <span>Sistemas</span>
+
+            <mat-icon *ngIf="!showSites; else HideSites">expand_more</mat-icon>
+            <ng-template #HideSites>
+              <mat-icon>expand_less</mat-icon>
+            </ng-template>
+          </div>
+        </mat-list-item>
+        <mat-list class="sublist" *ngIf="showSites">
+          <mat-list-item>
+            <mat-icon matListItemIcon>account_balance</mat-icon>
+            <span matListItemTitle>Gerador de Informações</span>
+          </mat-list-item>
+        </mat-list>
+        <mat-list-item>
+          <mat-icon matListItemIcon>api</mat-icon>
+          <div>
+            <span>APIs</span>
+            <mat-icon>expand_more</mat-icon>
+            <ng-template #HideAPIs>
+              <mat-icon>expand_less</mat-icon>
+            </ng-template>
+          </div>
+        </mat-list-item>
+      </mat-list>
+    </nav>
+  </mat-drawer>
+  <main>
+    <ng-content></ng-content>
+  </main>
+</mat-drawer-container>
